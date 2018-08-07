@@ -311,7 +311,8 @@ class Google:
         captcha_url = captcha_container.find('input', {'name': 'url'}).get('value')
         captcha_logintoken_audio = captcha_container.find('input', {'name': 'logintoken_audio'}).get('value')
         captcha_url_audio = captcha_container.find('input', {'name': 'url_audio'}).get('value')
-
+        
+        print(captcha_url)                               
         # Open captcha image
         with requests.get(captcha_url) as url:
             with io.BytesIO(url.content) as f:
